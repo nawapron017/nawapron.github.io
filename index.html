@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แฟ้มสะสมผลงาน | My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2b6cb0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #2b6cb0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2d3748;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #2b6cb0;
+            margin: 10px auto 0;
+        }
+
+        /* About Section */
+        .about-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Grid for Projects/Skills */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* ซ่อนเมนูในมือถือเพื่อความง่าย */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- เมนูบาร์ -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#projects">ผลงาน</a></li>
+        </ul>
+    </nav>
+
+    <!-- ส่วนแนะนำตัวหลัก -->
+    <header class="hero">
+        <h1>สวัสดีครับ/ค่ะ ฉันชื่อ [ชื่อของคุณ]</h1>
+        <p>นักเรียนระดับชั้น [ชั้นปี] | โรงเรียน [ชื่อโรงเรียน]</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- ส่วนเกี่ยวกับฉัน -->
+        <section id="about" style="margin-bottom: 5rem;">
+            <h2 class="section-title">เกี่ยวกับฉัน</h2>
+            <div class="about-content">
+                <p>แนะนำตัวเองสั้นๆ ที่นี่ เช่น ความสนใจ แผนการศึกษาต่อในอนาคต หรือเป้าหมายที่อยากทำ ยิ่งเขียนให้เห็นตัวตนและความตั้งใจจริงของคุณ จะช่วยให้พอร์ตดูน่าสนใจยิ่งขึ้นครับ</p>
+            </div>
+        </section>
+
+        <!-- ส่วนทักษะความสามารถ -->
+        <section id="skills" style="margin-bottom: 5rem;">
+            <h2 class="section-title">ทักษะความสามารถ</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">ด้านภาษา</h3>
+                        <p>ภาษาอังกฤษ (ระดับดี), ภาษาไทย (ภาษาแม่)</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">ด้านเทคโนโลยี</h3>
+                        <p>Microsoft Office, การตัดต่อวิดีโอ, การเขียนโค้ดเบื้องต้น</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">ทักษะอื่นๆ</h3>
+                        <p>การทำงานเป็นทีม, การเป็นผู้นำ, การคิดแก้ปัญหา</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ส่วนผลงาน -->
+        <section id="projects">
+            <h2 class="section-title">ผลงานและกิจกรรม</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">โครงงาน / กิจกรรมที่ 1</h3>
+                        <p>อธิบายสั้นๆ เกี่ยวกับโครงงาน หน้าที่ที่คุณทำ และผลลัพธ์ที่ได้จากกิจกรรมนี้</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">เกียรติบัตร / รางวัลที่ 2</h3>
+                        <p>รางวัลที่เคยได้รับ หรือการเข้าร่วมแข่งขันในระดับต่างๆ ที่ภาคภูมิใจ</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">งานจิตอาสา / กิจกรรมที่ 3</h3>
+                        <p>การเข้าร่วมกิจกรรมค่าย กิจกรรมเพื่อสังคม หรือตำแหน่งคณะกรรมการนักเรียน</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ส่วนท้ายหน้า -->
+    <footer>
+        <p>© 2026 [ชื่อของคุณ]. สร้างด้วย GitHub Pages</p>
+        <p>ติดต่อฉัน: email@example.com | โทร: 08x-xxx-xxxx</p>
+    </footer>
+
+</body>
+</html>
